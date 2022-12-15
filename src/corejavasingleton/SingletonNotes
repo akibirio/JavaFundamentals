@@ -1,0 +1,36 @@
+Java Singleton Class
+=====================
+- Singleton is a design pattern ad not a feature in java.
+- Singletone design pattern ensures a class can only have one object.
+
+properties of a singleton class:
+===============================
+- create a private constructor of a class to prevent bject creating from outside of the class
+- create a private attribute of class type that refers to the single object.
+- cretae a public static method that allows us to create and access the objects we created.
+  Inside the method, we'll create a condition that restricts us from creating more than one object.
+
+  <Example: Java singleton class syntax>
+  =======================================
+  class SingletonExample {
+       // private field that refers to the object
+    private static SingletonExample singleObject;
+                                              
+    private SingletonExample() {
+        // constructor of the SingletonExample class
+    }
+
+    public static SingletonExample getInstance() {
+        // write code that allows us to create only one object
+        // access the object as per our need
+        }
+  }
+
+  - private static SingletonExample singleObject - a reference to the object of the class.
+  - private SingletonExample() - a private constructor that restricts creating objects outside of the class.
+  -  public static SingletonExample getInstance() - this method returns the reference to the only object of the class. Since the method static, it can be accessed using the class name.
+
+Use of Singleton in Java:
+==========================
+- Singletons can be used while working with databases.
+- They can be used to create a connection pool to access the database while reusing the same connection for all the clients.
