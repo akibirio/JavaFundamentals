@@ -20,7 +20,18 @@ We can achieve Polymorphism in Java using:
              method overridding is a `run-time polymorphism`
 
 2. Method Overloading
-    - using the same name for a method but, with different parameter types, number of parameters of both.
-    - 
+    - using the same name for a method but, with different parameter types, number of parameters or both.
+    - example:
+        void func() { ... }
+        void func(int a) { ... }
+        float func(double a) { ... }
+        float func(int a, float b) { ... }
+    here, the same method will perform different operations based on parameter
+    <Note>: The method that is called is determined by the compiler. Hence, it's also known as 
+            compile-time polymorphism
 
 3. Operator Overloading
+    - Some operators in Java behave differently with different operands.
+    e.g + operator is overloaded to perform numeric operations as well as sting concatenation.
+    int sum = 8+2;  //out 10
+    String plName = "Java" + "Programming"; output // Java Programming
