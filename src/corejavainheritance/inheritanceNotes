@@ -1,0 +1,51 @@
+Inheritance in Java:
+=====================
+Inheritance is an Object Oriented Programming<OOP> property that allows us to derive a new class
+(subclass) from an existing subclass. The subclass inherits the attributes/variable and methods
+of the super class.
+
+Inheritance in java is achieved by using the extends keyword.
+
+Super keyword:
+=============
+-> used in subclasses to access the superclass Members(attributes, constructors and methods)
+- The super keyword is used to call the method of the parent class from the method of the child class.
+- It's also used to call the constructor of the parent class from the constructor of the child class.
+- Used to access the methods of the superclass after overidding.
+     > to call methods of superclass that is overridden in the subclass
+     > to access attributes(Fields) of the superclass if both superclass and subclass have
+       attributes with the same name.
+     > to explicitly call superclass no-arg(default) of parameterized constructor from the 
+       subclass constructor.
+
+
+Protected Members in Inheritance:
+===============================
+Protected Fields/variables and methods in parent/super class can be accessed from the child/subclass.
+
+
+Why Use Inheritance?
+====================
+1. The most important use of Inheritance is Code Reusability. i.e The code that is present in parent class
+can be directly used by the child class.
+
+2. Method overriding is also known as runtime Polymorphism<many forms>. Hence we can achieve
+Polymorphism in Java with the help of Inheritance.
+
+
+Method Overriding:
+==================
+If the same method is defined in both the parent class and child class, then the method of the child
+class overrides the method of the parent class.
+You can use the @Override annotation in the subclass method though its not mandatory
+
+    Java Overriding Rules:
+    ======================
+    1. Both the superclass and the subclass must have the same method name, the same return type
+       and the smae parameter list.
+    2. We cannot ovverride the methods declared as final and static.
+    3. We should always ovverride abstract methods of the superclass.
+
+
+
+

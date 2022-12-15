@@ -1,0 +1,26 @@
+Polymorphism:
+===============
+Having many forms:
+Polymorphism is an important concept in Object-Oriented Programming. It simply means more than one form.
+i.e the same entity(method or operator or object) can perform different operations in different scenarios.
+
+Why Polymorphism?
+=================
+It helps us create consistent code.
+Removes redudancy
+Btw --> print() method is an example of Polymorphism. It is used to print values of different types
+        like char, int, string, arrays, etc
+
+We can achieve Polymorphism in Java using:
+==========================================
+1. Method Overridding  --  during inheritance
+    - using a method with the same name adn definition in the superclass and subclasses
+    - The method will perform one operation in the superclass and another operation in the subclass
+    <Note> : The method  that is called is determined during the execution of the program. Hence, 
+             method overridding is a `run-time polymorphism`
+
+2. Method Overloading
+    - using the same name for a method but, with different parameter types, number of parameters of both.
+    - 
+
+3. Operator Overloading

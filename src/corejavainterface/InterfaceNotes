@@ -1,0 +1,23 @@
+Java Interface:
+================
+Java interface is fully an abstract class.
+It cannot be used to create objects.
+It only defines abstract methods. It includes Methods without a body.
+Java interfaces are implemented by other classes. We use implements keyword to implement an interface.
+
+One Interface can extend another interface using the extends keyword.
+You can extend several interfaces using a comma delimeter
+
+default Methods:
+================
+in Java 8 onwards, we can add methods with implementation inside an interface. 
+The methods are called default Methods.
+Are declared using default keyword.
+
+Advantages of Interfaces in java:
+===================================
+1. Similar to abstract classes, they help us to achieve abstraction in Java
+2. Interfaces provide specifications that a class (which implements it) must follow.
+3. Used to achieve multiple inheritance in java, when many interfaces are implemented by a class.
+
+
