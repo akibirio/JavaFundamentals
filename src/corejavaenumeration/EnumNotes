@@ -1,0 +1,39 @@
+Enum (short of Enumeration) in Java:
+====================================
+- An enum (short for enumeration) is a type that has a fixed set of constant values.
+- We use enum keyword to declare enums
+    example:
+        enum Size { 
+            SMALL, MEDIUM, LARGE, EXTRALARGE 
+        }
+<Note> : The enum constants are usually represented in uppercase.
+
+- In Java, enum types are considered to be a special type of class.
+- An enum class can include methods and fields just like regular classes.
+- When we create an enum class, the compiler will create instances (objects) of each enum constants.
+- Also, all enum constant is always public static final by default.
+
+Why Java Enums?
+================
+- enum was introduced to replace the use of int constants.
+- Suppose we have used a collection of int constants.
+        class Size {
+            public final static int SMALL = 1;
+            public final static int MEDIUM = 2;
+            public final static int LARGE = 3;
+            public final static int EXTRALARGE = 4;
+        }
+    if they are printed, only the numbers will be printed, which might be not so helpful.
+    instead of using int constants, we can simply use enums
+        enum Size {
+            SMALL, MEDIUM, LARGE, EXTRALARGE
+        }
+    this makes our code more intuitive and understandable
+- Also, enum provides compile-time type safety.
+
+Java enum Constructor:
+======================
+In Java, an enum class may include a constructor like a regular class. These enum constructors are either.
+- private - accessible within the class
+- package-private - accessible within the package
+
