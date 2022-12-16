@@ -1,0 +1,63 @@
+Java Exceptions:
+=================
+- An Exception is an unexpected event that occurs during program execution.
+- It affects the flow of the program instructions which can cause the program to terminate abnormally.
+
+Can occur becase of many reasons such as:
+ - invalid user input
+ - device failure
+ - loss of network connection
+ - physical limitations (out of disk memory)
+ - code errors
+ - Opening an unavailable file.
+
+Exception Hierarchy:
+====================
+        <Throwable>
+            - Error
+            - Exception
+                > Runtime Exception
+                > IO Exception
+
+Errors:
+========
+- They represent irrecoverable conditions such as JVM running out memory, memory leaks, stack
+  overflow errors, library incompatibility, infinite recursion etc
+- Errors are usually beyond the control of a programmer and we should not try to handle them.
+
+Exceptions:
+==============
+Exceptions can be caught and handled by the program.
+    <RuntimeExceptions>
+        - It happens due to a programming error
+        - they are known as unchecked exceptions
+         - These exceptions are not checked at compile-time but run-time. Some of the common runtime exceptions are:
+
+            - Improper use of an API - IllegalArgumentException
+            - Null pointer access (missing the initialization of a variable) - NullPointerException
+            - Out-of-bounds array access - ArrayIndexOutOfBoundsException
+            - Dividing a number by 0 - ArithmeticException
+    <IOException>
+        - Is a checked exception.
+        - They are checked by the compiler at the compile-time and the programmer is prompted to handle these exceptions.
+        - Some of the examples of checked exceptions are:
+            - Trying to open a file that doesn’t exist results in FileNotFoundException
+            - Trying to read past the end of a file
+
+Exception Handling:
+===================
+1. try ---- catch --- fianlly block
+            try {
+                // code
+            }
+        catch(Exception e) {
+                // code
+            }finaly{  // finally block always executes }
+
+2. throw and throws keyword
+    - Java throw keyword is used to explicitly throw a single exception.
+            e.g public static void divideByZero() {
+                     throw new ArithmeticException("Trying to divide by 0");
+                    }
+    - use the throws keyword in the method declaration to declare the type of exceptions that might occur within it.
+
