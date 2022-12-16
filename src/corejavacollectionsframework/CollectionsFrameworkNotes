@@ -1,0 +1,62 @@
+Collections Framework:
+======================
+- This Framework provides a set of interfaces and classes to implement various data structures and algorithms
+- Java collections framework provides various interfaces. 
+- These interfaces include several methods to perform different operations on collections.
+<Note>: We cannot create objects/instances from interfaces. We have classes that implements these interfaces. Methods in the interfaces will now be accessed using the objects created from he clasess that implement the interface.
+
+
+Interfaces of The Collections Framework:
+=========================================
+- There are three main interfaces under collections framework. These interfaces also have 
+  subinterfaces.
+
+1. Collection
+2. Map
+3. Iterator
+
+<CollectionInterface/
+=========================
+- its the root interface of the collections framework.
+- It has 3 sub-interfaces that extends it namely:
+    A) List Interface
+    ------------------
+        - The List interface is an ordered collection that allows us to add and remove elements
+          like an array.
+
+    B) Set Interface
+    ------------------
+        - The Set interface allows us to store elements in different sets similar to the set in 
+          mathematics. It cannot have duplicate elements. 
+
+    C) Queue Interface
+    ------------------
+        - The Queue interface is used when we want to store and access elements in First In, 
+          First Out manner.
+
+<MapInterface/
+=========================
+- The Map interface allows elements to be stored in key/value pairs.
+- Keys are unique names that can be used to access a particular element in a map. And, each key has 
+  a single value associated with it.
+- The Map interface of collections framework provides the functionality of the map data structure.
+
+
+<IteratorInterface/
+=========================
+- The Iterator interface provides methods that can be used to access elements of collections.
+
+
+Why the Collections Framework?
+===============================
+The Java collections framework provides various data structures and algorithms that can be used directly. This has two main advantages:
+
+1. We do not have to write code to implement these data structures and algorithms manually.
+2. Our code will be much more efficient as the collections framework is highly optimized.
+
+Moreover, the collections framework allows us to use a specific data structure for a particular type of data. Here are a few examples,
+
+- If we want our data to be unique, then we can use the Set interface provided by the collections
+  framework.
+- To store data in key/value pairs, we can use the Map interface.
+- The ArrayList class provides the functionality of resizable arrays.
