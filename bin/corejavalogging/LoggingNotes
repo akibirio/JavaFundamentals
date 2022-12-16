@@ -1,0 +1,3 @@
+Java allows us to create and capture log messages and files through the process of logging.
+In Java, logging requires frameworks and APIs. Java has a built-in logging framework in the java.util.logging package.
+We can also use third-party frameworks like Log4j, Logback, and many more for logging purposes.
