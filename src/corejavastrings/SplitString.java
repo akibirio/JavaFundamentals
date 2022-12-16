@@ -9,7 +9,7 @@ public class SplitString {
 
         System.out.println("Result = ");
         for (String string : result) {
-            System.out.println(string + " , ");
+            System.out.print(string + " , ");
             
         }
     }
