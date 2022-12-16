@@ -1,0 +1,25 @@
+String Notes:
+============
+- A String is a sequence of characters.
+- In Java, we use double quotes "" to represent a string.
+      e.g 
+      //create a string variable called name and initialized the variable with the string "Ayub Kibirio"
+      String name = "Ayub Kibirio";
+<Note>: Strigs are not primitive types. All strings are objects of a predefined class named String.
+        All string variables are instances of the String class.
+
+Java String Operations:
+=======================
+1. string.lenght()  --- > get length of a string. returns an int.
+2. firstString.concat(secondString) --> Joins two strings and returns joined string. We can as well use + operator.
+3. firstString.equals(secondString) --> Compares first and second string and returns a boolean, true or false.
+4. firstString.contains("secondString") --> checks whether the specified string (sequence of characters) is present in the string or not. returns true or false
+5. string.substring(int startIndex, int endIndex) --> extracts a substring from the string and returns it.
+6  String.join(" ", str1, str2, str3);  --> joins the given strings using a delimiter.
+7. string.replace("oldText", "newText") --> eplaces each matching occurrence of the old character/text in the string with the new character/text.
+8. string.replaceAll(String regex, String replacement)  --> replaces all occurrences of the regex. replaces each substring that matches the regex of the string with the specified text.
+9. 
+
+
+      
+    

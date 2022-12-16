@@ -1,9 +1,0 @@
-String Notes:
-============
-- A String is a sequence of characters.
-- In Java, we use double quotes "" to represent a string.
-      e.g 
-      //create a string variable called name and initialized the variable with the string "Ayub Kibirio"
-      String name = "Ayub Kibirio";
-      
-    
