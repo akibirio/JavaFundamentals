@@ -18,8 +18,27 @@ Java String Operations:
 6  String.join(" ", str1, str2, str3);  --> joins the given strings using a delimiter.
 7. string.replace("oldText", "newText") --> eplaces each matching occurrence of the old character/text in the string with the new character/text.
 8. string.replaceAll(String regex, String replacement)  --> replaces all occurrences of the regex. replaces each substring that matches the regex of the string with the specified text.
-9. 
-
+9. string.replaceFirst(String regex, String replacement) --> eplaces the first substring that matches the regex of the string with the specified text.
+10. string.charAt(int index) -- > returns the character present in the specified location/index.
+11. byte[] byteArray = string.getBytes() --> encodes the string into a sequence of bytes and stores it in a byte array.
+12. int result = str1.indexOf('s'); --> returns an int, index of the first occurrence of the specified character/substring within the string.
+13. int result = str1.compareTo(str2); --> 1 if str1 comes after str2, 0 if equal, -1 if str1 comes before str2: compares two strings lexicographically (in the dictionary order).
+14. string.compareToIgnoreCase(String str) --> compares two strings lexicographically (in the dictionary order), ignoring case differences.
+15. string.trim() --> removes any leading (starting) and trailing (ending) whitespaces from the specified string.
+16. String.format("Language: %s", string) -->	returns a formatted string
+17. String[] result = text.split(" "); --> breaks the string into an array of strings
+18. toLowerCase()	converts the string to lowercase
+19. toUpperCase()	converts the string to uppercase
+20. valueOf()	returns the string representation of the specified argument
+21. toCharArray()	converts the string to a char array
+22. matches()	checks whether the string matches the given regex
+23. startsWith()	checks if the string begins with the given string
+24. endsWith()	checks if the string ends with the given string
+25. isEmpty()	checks whether a string is empty of not
+26. intern() 	returns the canonical representation of the string
+27. contentEquals()	checks whether the string is equal to charSequence
+28. hashCode()	returns a hash code for the string
+29. subSequence()	returns a subsequence from the string
 
       
     
