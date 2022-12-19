@@ -1,0 +1,22 @@
+Arrays In Java:
+===============
+Arrays are index based. They are used to store collection of data that is of the same data type.
+Arrays are of fixed size, that means, once declread you cannt modify its size. They hold fixed data.
+Array is the building Block of many data structures like List.
+
+Arrays class:
+============= 
+In Java, there is a very important utility class called Arrays.
+It is part of the java.util.Arrays package and it provides very helpful utility methods like:
+    - Perfom binary search:
+    - loop throught an array using stream and for each.
+    - convert array to String
+    - sort an array
+    - split and array
+    - compare two arrays
+
+Two Dimension Array:
+====================
+- Used to implement grid applications
+- Example --- TIC TAC TOE game
+- has X and Y axis
