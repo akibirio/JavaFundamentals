@@ -1,0 +1,7 @@
+Stack Notes:
+=============
+- The Stack class represents a Last-In-First-Out(LIFO) stack of Objects.
+- It extends class Vector with five operations that allow a vector to be treated as a stack.
+- The usual Push and Pop operations are provided as well as the peek method to peek at the top item on the stack.
+- It has a method to check whether the stack is empty.
+- It also has a method to search the stack for an item and discover how far it is from the top.
