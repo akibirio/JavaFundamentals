@@ -26,6 +26,7 @@ Generic Algorithms:
 4. Searching Using binarySearch()
    The binarySearch() method of the Java collections framework searches for the specified element.
    It returns the position of the element in the specified collections.
+   <Note:> The collection should be sorted before performing the binarySearch() method.
 
 5. Composition
     frequency() - returns the count of the number of times an element is present in the collection
