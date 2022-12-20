@@ -1,12 +1,18 @@
 Map Interface:
 ==============
 - It's an Interface of the collections framework.
+- The Map interface provides the functionality of the map data structure.
 - A map is a collection of key, value pairs.
 - Keys cannot be duplicates
 - Each key can map to at most one value.
+- We can access and modify values using the keys associated with them.
+<Note>:  The Map interface maintains 3 different sets:
+         - the set of keys
+         - the set of values
+         - the set of key/value associations (mapping).
 
-Classes of Map interfaces:
-==========================
+Classes that Implements Map interfaces:
+======================================
 We cannot create objects from Map because its an Interface. Instead, inorder to use Map functionalities, we use classes that implements Map interface.
     - HashTable
     - HashMap  --> LinkedHashMap
@@ -17,4 +23,125 @@ We cannot create objects from Map because its an Interface. Instead, inorder to 
 - LinkedHashMap - doubly LinkedList implementation & its slow & needs more memory space. Null Not
   allowed. 
 - TreeMap of SortedMap is sorted and nulls arnt allowed.
+- EnumMap
+- WeekHashMap
+
+
+Interfaces that extend Map
+==========================
+The Map interface is also extended by these subinterfaces:
+ - SortedMap
+ - NavigableMap
+ - ConcurrentMap
+
+How to use Map?
+==============
+- First import the java.util.Map package in order to use Map
+// Map implementation using HashMap
+Map<Key, Value> numbers = new HashMap<>();
+
+
+Methods of Map:
+================
+> The Map interface includes all the methods of the Collection interface. It is because Collection is a super interface of Map.
+> The Map interface also includes the following methods:
+- put(Key, Value) - Inserts the association of a key K and a value V into the map. If the key is 
+  already present, the new value replaces the old value.
+- putAll() - Inserts all the entries from the specified map to this map.
+- putIfAbsent(K, V) - Inserts association if the key K isn't already associated with the value V.
+- get(K) - Returns the value associated with the specified key K. If the key isn't found, it 
+  returns null.
+- getOrDefault(K, defaultValue) - Returns the value associated with the specified key K. If the key 
+  is not found, it returns the defaultValue.
+- containsKey(K) - Checks if the specified key K is present in the map or not.
+- containsValue(V) - Checks if the specified value V is present in the map or not.
+- replace(K, V) - Replace the value of the key K with the new specified value V.
+- replace(K, oldValue, newValue) - Replaces the value of the key K with the new value newValue only 
+  if the key K is associated with the value oldValue.
+- remove(K) - Removes the entry from the map represented by the key K.
+- remove(K, V) - Removes the entry from the map that has key K associated with value V.
+- keySet() - Returns a set of all the keys present in a map.
+- values() - Returns a set of all the values present in a map.
+- entrySet() - Returns a set of all the key/value mapping present in a map.
+
+LinkedHashMap Vs. HashMap
+===========================
+Both the LinkedHashMap and the HashMap implements the Map interface. However, there exist some differences between them.
+- LinkedHashMap maintains a doubly-linked list internally. Due to this, it maintains the insertion 
+  order of its elements.
+- The LinkedHashMap class requires more storage than HashMap. This is because LinkedHashMap 
+  maintains linked lists internally.
+- The performance of LinkedHashMap is slower than HashMap.
+
+WeakHashMap Class:
+==================
+- Keys of the weak hashmap are of the WeakReference type.
+- The object of a weak reference type can be garbage collected in Java if the reference is no 
+  longer used in the program.
+  //WeakHashMap creation with capacity 8 and load factor 0.6
+  WeakHashMap<Key, Value> numbers = new WeakHashMap<>(8, 0.6);
+-  unlike hashmaps, keys of weak hashmaps are of weak reference type. This means the entry of a map are removed by the garbage collector if the key to that entry is no longer used. This is useful to save resources.
+
+
+SortedMap interface:
+====================
+- Extends Map interface
+- The SortedMap interface provides sorting of keys stored in a map.
+- Since its an interface, we cannot create objects from it, hence we use TreeMap class that implements this interface.
+
+How to use SortedMap?
+=====================
+// SortedMap implementation by TreeMap class
+SortedMap<Key, Value> numbers = new TreeMap<>();
+
+NavigableMap Interface
+======================
+- The NavigableMap interface of the Java collections framework provides the features to navigate among the map entries.
+- It extends SortedMap interface.
+
+How to use NavigableMap:
+========================
+- import the java.util.NavigableMap package to use NavigableMap
+  // NavigableMap implementation by TreeMap class
+  NavigableMap<Key, Value> numbers = new TreeMap<>();
+- Since its an interface, we use TreeMap class to use its functionalities.
+
+TreeMap class:
+================
+- Implements Navigable-->SortedMap-->Map interface.
+- The TreeMap class  provides the tree data structure implementation.
+- The elements in TreeMap are sorted naturally (ascending order).
+- However, we can customize the sorting of elements by using the Comparator interface.
+
+
+ConcurrentMap Interface:
+=========================
+- It Extends the Map Interface.
+- The ConcurrentMap interface provides a thread-safe map. That is, multiple threads can access the 
+  map at once without affecting the consistency of entries in a map.
+- ConcurrentMap is known as a synchronized map.
+- ConcurrentHashMap implements the ConcurrentMap interface, since we cannot create objects from an 
+  interface.
+    
+    creating concurrentHasMap:
+    ==========================
+   // ConcurrentHashMap with capacity 8 and load factor 0.6
+   ConcurrentHashMap<Key, Value> numbers = new ConcurrentHashMap<>(8, 0.6f);
+
+ConcurrentHashMap vs HashMap
+============================
+- ConcurrentHashMap is a thread-safe collection. That is, multiple threads can access and modify it 
+  at the same time.
+- ConcurrentHashMap provides methods for bulk operations like forEach(), search() and reduce().
+
+Why ConcurrentHashMap?
+=======================
+- The ConcurrentHashMap class allows multiple threads to access its entries concurrently.
+- By default, the concurrent hashmap is divided into 16 segments. This is the reason why 16 
+  threads are allowed to concurrently modify the map at the same time. However, any number of threads can access the map at a time.
+- The putIfAbsent() method will not override the entry in the map if the specified key already 
+  exists.
+- It provides its own synchronization.
+
+
 
