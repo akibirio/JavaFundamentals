@@ -1,0 +1,20 @@
+Map Interface:
+==============
+- It's an Interface of the collections framework.
+- A map is a collection of key, value pairs.
+- Keys cannot be duplicates
+- Each key can map to at most one value.
+
+Classes of Map interfaces:
+==========================
+We cannot create objects from Map because its an Interface. Instead, inorder to use Map functionalities, we use classes that implements Map interface.
+    - HashTable
+    - HashMap  --> LinkedHashMap
+    - SortedMap ---> NavigableMap --> TreeMap
+
+- HashTable is synchronised. Good for multi-threaded apps. It's slow. Null Not allowed.
+- HashMap -- Null Allowed. Synchronised and slow.
+- LinkedHashMap - doubly LinkedList implementation & its slow & needs more memory space. Null Not
+  allowed. 
+- TreeMap of SortedMap is sorted and nulls arnt allowed.
+
