@@ -21,6 +21,14 @@ public class WorkingWithMaps {
 
         /// lloop through
         map.entrySet().forEach(System.out::println);
+        /// lloop through with lambda
+        System.out.println("loop through with lambda :: ");
+        map.entrySet().forEach(x -> System.out.println(x.getKey() + " " + x.getValue()));
+
+        /// lloop through with lambda option 2
+        map.forEach((key, value) -> {
+                System.out.println(key + " - " + value);
+        });
         
     }
 
