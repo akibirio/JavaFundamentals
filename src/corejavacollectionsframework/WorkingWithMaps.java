@@ -16,7 +16,8 @@ public class WorkingWithMaps {
         System.out.println(map.size());
         System.out.println(map.get(1));
         System.out.println(map.containsKey(4));
-        System.out.println(map.keySet());
+        System.out.println(map.keySet());  // get all keys as set
+        System.out.println(map.values());  // get all values.
         System.out.println(map.entrySet());
 
         /// lloop through
