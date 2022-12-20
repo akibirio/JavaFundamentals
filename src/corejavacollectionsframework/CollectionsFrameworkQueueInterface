@@ -141,5 +141,29 @@ In order to create an array deque, we must import the java.util.ArrayDeque packa
     - If you are implementing the queue or the deque data structure, an ArrayDeque is likely to 
       faster than a LinkedList.
 
+BlockingQueue Interface:
+=========================
+- Its a subinterface of the Queue interface.
+- It allows any operation to wait until it can be successfully performed.
+- E.g if we want to delete an element from an empty queue, then the blocking queue allows the 
+  delete operation to wait until the queue contains some elements to be deleted.
+- BlockingQueue is an interface, we cannot provide the direct implementation of it. we need to use 
+  classes that implement it.
+     > ArrayBlockingQueue class
+     > LinkedBlockingQueue class
+- We must import the java.util.concurrent.BlockingQueue package in order to use BlockingQueue int
+    // Array implementation of BlockingQueue
+    BlockingQueue<String> animal1 = new ArraryBlockingQueue<>();
+
+    // LinkedList implementation of BlockingQueue
+    BlockingQueue<String> animal2 = new LinkedBlockingQueue<>();
+
+   Why BlockingQueue?
+   ==================
+   - In Java, BlockingQueue is considered as the thread-safe collection.
+   - It is because it can be helpful in multi-threading operations.
+        Suppose one thread is inserting elements to the queue and another thread is removing elements from the queue.
+        Now, if the first thread runs slower, then the blocking queue can make the second thread wait until the first thread completes its operation.
+
 
 
