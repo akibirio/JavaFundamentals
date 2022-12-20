@@ -44,3 +44,106 @@ Set Interface:     -- No Duplicates allowed.
  - Union - to get the union of two sets x and y, we can use x.addAll(y)
  - Intersection - to get the intersection of two sets x and y, we can use x.retainAll(y)
  - Subset - to check if x is a subset of y, we can use y.containsAll(x)
+
+HashSet Class:
+==============
+- Implements The Set Interface.
+- The HashSet class provides the functionalities of the hashtable data structure.
+    Creating a HashSet
+    ==================
+    - First import the java.util.HashSet package.
+        // HashSet with 8 capacity and 0.75 load factor
+        HashSet<Integer> numbers = new HashSet<>(8, 0.75);
+             - capacity - The capacity of this hash set is 8. Meaning, it can store 8 elements. Default id 16.
+             - loadFactor - The load factor of this hash set is 0.6. This means, whenever our hash set is filled by 60%, the elements are moved to a new hash table of double the size of the original hash table. Default is 0.75 or 70%.
+    Why HashSet?
+    =============
+    - HashSet is commonly used if we have to access elements randomly. It is because elements in a 
+      hash table are accessed using hash codes.
+    - The hashcode of an element is a unique identity that helps to identify the element in a hash 
+      table.
+    - HashSet cannot contain duplicate elements. Hence, each hash set element has a unique hashcode.
+    <Note> : HashSet is not synchronized.
+             That is if multiple threads access the hash set at the same time and one of the threads modifies the hash set. Then it must be externally synchronized.
+
+EnumSet Class:
+==============
+- The EnumSet class provides a set implementation of elements of a single enum.
+- It implements the Set interface.
+        Creating EnumSet
+      ===================
+      - First import the java.util.EnumSet package.
+      - Unlike other set implementations, the enum set does not have public constructors. We must 
+        use the predefined methods to create an enum set.
+     
+     Why EnumSet?
+     =============
+     - The EnumSet provides an efficient way to store enum values than other set implementations (like HashSet, TreeSet).
+     - An enum set only stores enum values of a specific enum. Hence, the JVM already knows all the possible values of the set.
+     - This is the reason why enum sets are internally implemented as a sequence of bits. Bits specifies whether elements are present in the enum set or not.
+     - The bit of a corresponding element is turned on if that element is present in the set.
+    
+    LinkedHashSet Class:
+    ====================
+    - The LinkedHashSet class provides functionalities of both the hashtable and the linked list data structure.
+    - It implements the Set interface.
+    - Elements of LinkedHashSet are stored in hash tables similar to HashSet. However, linked hash
+      sets maintain a doubly-linked list internally for all of its elements. 
+    - The linked list defines the order in which elements are inserted in hash tables.
+
+         Create a LinkedHashSet
+         =======================
+         - First import the java.util.LinkedHashSet package
+            // LinkedHashSet with 8 capacity and 0.75 load factor
+            LinkedHashSet<Integer> numbers = new LinkedHashSet<>(8, 0.75);
+            ///using set interface directly
+            Set<Integer> numbers = new LinkedHashSet<>();
+
+         LinkedHashSet Vs. HashSet
+         =========================
+         - LinkedHashSet maintains a linked list internally. Due to this, it maintains the 
+           insertion order of its elements.
+         - The LinkedHashSet class requires more storage than HashSet. This is because 
+           LinkedHashSet maintains linked lists internally.
+         - The performance of LinkedHashSet is slower than HashSet. It is because of linked lists 
+           present in LinkedHashSet.
+
+          LinkedHashSet Vs. TreeSet
+          =========================
+        - The TreeSet class implements the SortedSet interface. That's why elements in a tree set are sorted. However, the LinkedHashSet class only maintains the insertion order of its elements.
+        - A TreeSet is usually slower than a LinkedHashSet. It is because whenever an element is added to a TreeSet, it has to perform the sorting operation.
+        - LinkedHashSet allows the insertion of null values. However, we cannot insert a null value to TreeSet.
+
+    
+SortedSet Interface
+===================
+- The SortedSet interface is used to store elements with some order in a set.
+- It extends the Set interface.
+- In order to use the functionalities of the SortedSet interface, we need to use the TreeSet class that implements it.
+
+NavigableSet Interface
+======================
+- The NavigableSet interface  provides the features to navigate among the set elements.
+- It is considered as a type of SortedSet.
+- It extends the SortedSet interface.
+- In order to use the functionalities of the NavigableSet interface, we need to use the TreeSet class that implements NavigableSet.
+
+TreeSet Class
+=============
+- Implements the SortedSet and NavigableSet interfaces of the Set interface.
+- The TreeSet class  provides the functionality of a tree data structure.
+
+    Creating a TreeSet
+    ===================
+    - first import import the java.util.TreeSet.
+         TreeSet<Integer> numbers = new TreeSet<>();
+         SortedSet<Integer> numbers = new TreeSet<>();
+         NavigableSet<Integer> numbers = new TreeSet<>();
+    - Here, we have created a TreeSet without any arguments. In this case, the elements in TreeSet are sorted naturally (ascending order).
+    - However, we can customize the sorting of elements by using the Comparator interface. We will learn about it later in this tutorial.
+
+    TreeSet Vs. HashSet
+    ===================
+    - Unlike HashSet, elements in TreeSet are stored in some order. It is because TreeSet implements the SortedSet interface as well.
+    - TreeSet provides some methods for easy navigation. For example, first(), last(), headSet(), tailSet(), etc. It is because TreeSet also implements the NavigableSet interface.
+    - HashSet is faster than the TreeSet for basic operations like add, remove, contains and size.
