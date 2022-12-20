@@ -1,0 +1,11 @@
+Java OutputStream Class:
+==========================
+- The OutputStream class of the java.io package is an abstract superclass that represents an output stream of bytes.
+- Since OutputStream is an abstract class, it is not useful by itself. However, its subclasses can be used to write data.
+
+Subclasses of OutputStream
+==========================
+Below are subclasses that extends OutputStream abstract class.
+FileOutputStream
+ByteArrayOutputStream
+ObjectOutputStream

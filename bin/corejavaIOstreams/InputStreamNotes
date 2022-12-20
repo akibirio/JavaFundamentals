@@ -1,0 +1,11 @@
+Java InputStream Class:
+======================
+- The InputStream class of the java.io package is an abstract superclass that represents an input stream of bytes.
+- Since InputStream is an abstract class, it is not useful by itself. However, its subclasses can be used to read data.
+
+Subclasses of InputStream
+=========================
+Below are subclasses that extends InputStream abstract class.
+1. FileInputStream
+2. ByteArrayInputStream
+3. ObjectInputStream
