@@ -1,0 +1,35 @@
+Generic Algorithms:
+====================
+- The Java collections framework provides various algorithms that can be used to manipulate 
+  elements stored in data structures.
+- Algorithms in Java are static methods that can be used to perform various operations on 
+  collections.
+
+1. Sorting using sort()
+   The sort() method provided by the collections framework is used to sort elements. 
+   The sorting occurs in natural order (ascending order). However, we can customize the sorting order of the sort() method using the Comparator interface.
+
+2. Shuffling Using shuffle()
+   The shuffle() method of the Java collections framework is used to destroy any kind of order present in the data structure. 
+   It does just the opposite of the sorting.
+   When we run the program, the shuffle() method will return a random output.
+   The shuffling algorithm is mainly used in games where we want random output.
+
+3. Routine Data Manipulation
+   In Java, the collections framework provides different methods that can be used to manipulate data.
+    reverse() - reverses the order of elements
+    fill() - replace every element in a collection with the specified value
+    copy() - creates a copy of elements from the specified source to destination
+    swap() - swaps the position of two elements in a collection
+    addAll() - adds all the elements of a collection to other collection
+
+4. Searching Using binarySearch()
+   The binarySearch() method of the Java collections framework searches for the specified element.
+   It returns the position of the element in the specified collections.
+
+5. Composition
+    frequency() - returns the count of the number of times an element is present in the collection
+    disjoint() - checks if two collections contain some common element.
+
+6. Finding Extreme Values
+   The min() and max() methods of the Java collections framework are used to find the minimum and the maximum elements, respectively. 
