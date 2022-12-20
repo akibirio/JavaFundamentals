@@ -1,0 +1,145 @@
+Queue Interface:
+================
+- It extends the Collection Interface of the Collections Framework.
+- FIFO {First In First Out implementation}. It is used when we want to store & access elements in a FIFO maaner. 
+- Its a collection designed for holding elements prior to processing.
+- There are different classes that implements Queue such as LinkedList, PriorityQueue, ArrayDeque....
+- Queue has subinterfaces that extend it like Deque, BlockingQueue & BlockingDeque, 
+
+
+Classes that implement Queue Interface:
+=======================================
+1. PriorityQueue
+2. LinkedList
+3. ArrayDeque
+
+
+PriorityQueue class:
+====================
+- This class provides the Implementation of Heap Data Structure.
+- It implements Queue Interface that extends Collection Interface.
+- Unlike Normal Queues, priority queue elements are retrieved in sorted order.
+- It is important to note that the elements of a priority queue may not be sorted. However, 
+  elements are always retrieved in sorted order.
+
+        Creating PriorityQueue:
+    =============================
+    We need to import java.util.PriorityQueue package
+     - using PQ classname :       PriorityQueue<Integer> numbers = new PriorityQueue<>();
+     - using Queue InterfaceName: Queue<Integer> numbers = new PriorityQueue<>();
+     note: - here we have created the PQ without any arguments. In this case the head of the PQ is 
+             the smallest element the queue & elements are removed in ascending order from the queue.
+           - However, we cna customize  the ordering of the elements with the help of the Comparator
+             interface.
+    
+     Methods of the PriorityQueue:
+    ===============================
+    The PQ class provides the implementation of all methods in the Queue Interface.
+        - PQ.add(item)   -> inserting element in the queue. If queue is full it throws an exception.
+        - PQ.offer(item) -> inserting element in the queue. If queue is full, returns false.
+        - PQ.peek() -> accessing the elements in the queue. It returns the head of the queue.
+        - PQ.remove(item) -> removes the specified element from the queue.
+        - PQ.poll() -> returns and removes the head of the queue.
+        - PQ.contains(element) -> Searches the priority queue for the specified element. true/false.
+        - PQ.size() -> returns the length of the priority queue.
+        - PQ.toArray() -> Converts a priority queue to an array and returns it.
+    
+    Iterating over the elements of a priority Queue uisn the iterator method of the java.util.Iterator package.
+        // Creating a priority queue
+        PriorityQueue<Integer> numbers = new PriorityQueue<>();
+        
+        //Using the iterator() method
+        Iterator<Integer> iterate = numbers.iterator();
+        while(iterate.hasNext()) {
+            System.out.print(iterate.next());
+            System.out.print(", ");
+        }
+
+
+Deque Interface:
+=================
+- It extends the queue interface that extends the collection interface.
+- It provides the functionality of double-ended queue. 
+- In regular Queue, elements are added from the rear/back of the queue and removed from the front.
+- But in Deque, we can insert and remove elements from both front and rear.
+- Inorder to use the functionalities of the Deque interfaces we need to use classes the implement it: i.e LinkedList class and ArrayDeque class.
+- import java.util.Deque package to use Deque interface.
+        // Array implementation of Deque
+        Deque<String> animal1 = new ArrayDeque<>();
+
+        // LinkedList implementation of Deque
+        Deque<String> animal2 = new LinkedList<>();
+- Since Deque extends the Queue interface, it inherits all the methods of the Queue interface.
+
+
+LinkedList class:
+=================
+It implements the List, Queue and Deque Interfaces.
+It Provides the implementation of the Linked list data structure {Doubly Linked List}
+Each element in a linked list is known as node. It consists of 3 fields:
+    i. Prev - stores an address of the previous element in the List. Its null for the first element.
+    ii. Next - stores an address of the next elemt in the list. Its null of the last element.
+    iii. Data - stores the actual data
+    Creating a java LinkedList:
+    As List:  LinkedList<Type> linkedList = new LinkedList<>(); //Type is data type.
+    As Queue: Queue<String> languages = new LinkedList<>();
+    As Deque: Deque<String> animals = new LinkedList<>();
+
+    Methods:
+    =========
+         <From List Interface>
+    - list.add() or add(int index, type value) -> add an element(node) at the End of LinkedList
+    - list.get(index)               -> Access an element form the LinkedList
+    - list.set(index, newValue)     -> used to change elements of the Lineked List.
+    - list.remove(index) -> removes and returns element at the specified index of the LinkedList
+    - contains()         -> checks if the LinkedList contains the element
+    - indexOf()	         -> returns the index of the first occurrence of the element
+    - lastIndexOf()	     -> returns the index of the last occurrence of the element
+    - clear()	         -> removes all the elements of the LinkedList
+    - iterator()         -> returns an iterator to iterate over LinkedList
+        <the below Methods comes from Queue and Deque Interfaces>
+        ===========================================================
+    - addFirst()    -> adds the specified element at the beginning of the linked list. Throws an
+                       exception if the deque is full.
+    - addLast()	    -> adds the specified element at the end of the linked list. Throws an 
+                       exception if the deque is full.
+    - getFirst()    -> returns the first element. Throws an exception if the deque is empty.
+    - getLast()	    -> returns the last element. Throws an exception if the deque is empty.
+    - removeFirst()	-> removes the first element. Throws an exception if the deque is empty.
+    - removeLast()	-> removes the last element. Throws an exception if the deque is empty.
+    - peek()        -> returns the first element (head) of the linked list. null if empty.
+    - poll()        -> returns and removes the first element from the linked list. null if empty.
+    - offer()       -> adds the specified element at the end of linked list.Returns false if full.
+
+ArrayDeque Class:
+==================
+It implements the Queue and Deque Interfaces.
+We use ArrayDeque class to implement queue and deque data structures using arrays.
+In order to create an array deque, we must import the java.util.ArrayDeque package.
+    Creating ArrayDeque:
+    ===================
+    - using the ArrayDeque class: ArrayDeque<Type> animal = new ArrayDeque<>();
+    - using the Queue Interface:  Queue<Type> animal = new ArrayDeque<>();
+    - using the Deque Interface:  Deque<Type> animal = new ArrayDeque<>();
+
+    ArrayDeque as a Stack
+    =====================
+    - To implement a LIFO (Last-In-First-Out) stacks in Java, it is recommended to use a deque over 
+      the Stack class.
+    - The ArrayDeque class is likely to be faster than the Stack class.
+    - ArrayDeque provides the following methods that can be used for implementing a stack:
+            -> push() - adds an element to the top of the stack
+            -> peek() - returns an element from the top of the stack
+            -> pop()  - returns and removes an element from the top of the stack
+   
+   ArrayDeque Vs. LinkedList Class
+   ================================
+   They both implement Deque interface but they have below differences:
+    - LinkedList supports null elements, whereas ArrayDeque doesn't.
+    - Each node in a linked list includes links to other nodes. That's why LinkedList 
+      requires more storage than ArrayDeque.
+    - If you are implementing the queue or the deque data structure, an ArrayDeque is likely to 
+      faster than a LinkedList.
+
+
+
